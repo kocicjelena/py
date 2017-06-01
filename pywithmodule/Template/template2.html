@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+{% block title %}Blogs {% endblock %}
+
+{% block content %}
+
+
+{% for blog in blog_list %}
+<h1><a href="{{ Entry.entry_id }}">{{ Entry.headline }}</a></h1>
+<h1>Articles for {{ Entry.pub_date|date:"Y" }}</h1>
+    <p>{{ Entry.headline }}</p>
+    <p>By {{ Entry.blog.name }}</p>
+    <p>Published {{ Entry.pub_date|date:"F j, Y" }}</p>
+
+
+<h3>{{ Blog.blog_id}}
+{% if Blog.title %}: {{Blog.title}}{% else %} {% endif %}</h3>
+{% endfor %}
+{% endblock %}

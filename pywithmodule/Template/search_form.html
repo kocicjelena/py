@@ -1,0 +1,31 @@
+<html>
+{% extends "base.html" %}
+{% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    {% block content %}
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+	
+    <form action="" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+	<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if Entry %}
+    
+    <ul>
+        {% for entry in books %}
+        <li>{{ Entry.title }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No books matched your search criteria.</p>
+{% endif %}
+{% endblock %}

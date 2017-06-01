@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    {% block content %}
+     <form action="" method="get"><input type="text" name="blog"> <input type="submit" value="Search"></form>
+    {% if blog %}
+    
+    <ul>
+        {% for blog in bloglist %}
+        <li>{{ blog.name }}</li>
+        <li>{{ blog.tagline }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No blogs </p>
+{% endif %}
+    {% endblock %}

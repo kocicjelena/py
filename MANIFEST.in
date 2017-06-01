@@ -1,0 +1,8 @@
+# Include the license file
+include runner README LICENSE.txt
+
+# Include the data files
+recursive-include data *
+recursive-include pywithmodule/Blog *
+recursive-include pywithmodule/static *
+recursive-include pywithmodule/Template *

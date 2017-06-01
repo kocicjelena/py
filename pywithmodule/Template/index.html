@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+{% block title %}  ALL POSTS{% endblock %}
+	{% block content %}
+{% for blog in posts %}
+
+	 <h2>{{Blog }}</h2>
+   <h3>{{ blog.name }}</h3>
+	   <h3>{{ blog.tagline }}</h3>
+	  <p>{{ body }}</p>
+	 
+    {% endfor %}
+   
+  {% endblock %}
+ {% block sidebar %}{% endblock %}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<title>My amazing library</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="/"><span class="logo_colour"></span></a></h1>
+          <h2></h2>
+        </div>
+       
+       
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="current"><a href="/">Home</a></li>
+          <li><a href="/blog/searchblog/">search posts</a></li>
+          <li><a href="/blog/i/">NEW POST</a></li>
+          <li><a href="/blog/entry/">DETAILS</a></li>
+          <li><a href="/blog/authorlist/">AUTHORS</a></li>
+            <ul>
+              <li><a href="/blog/searchform/">NEW search</a></li>
+              <li><a href="/blog/contact/">CONTACT</a></li>
+                <ul>
+                  <li><a href="/blog/date/">list by date</a></li>
+                  <li><a href="/blog/bloglist/">bloglist</a></li>
+                  <li><a href="/blog/list/">list</a></li>
+                  <li><a href="/blog/searchform/">SEARCHFORM</a></li>
+                </ul>
+              </li>
+              <li><a href="/blog/contact2/">contact2</a></li>
+              <li><a href="/blog/search/">sear</a></li>
+              <li><a href="/blog/contact3/">contact3</a></li>
+            </ul>
+          </li>
+          <li><a href="/blog/contact/">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+<div id="sidebar">
+
+</div>
+<div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <h3>Latest News</h3>
+          <div class="sidebar_item">
+            <h4>New Website Launched</h4>
+            <h5>January 1st, 2014</h5>
+            <p><br /><a href="/blog/date/">Read more</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <h3>Useful Links</h3>
+          <div class="sidebar_item">
+          <h4></h4>
+            <ul>
+              <li><a href="/blog/contact2/">contact2</a></li>
+              <li><a href="/blog/search/">search name</a></li>
+              <li><a href="/blog/searchform/">SEARCHFORM</a></li>
+              <li><a href="/blog/contact3/">contact3</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <h3>More Useful Links</h3>
+          <div class="sidebar_item">
+            <ul>
+              <li><a href="/blog/date/">list by date</a></li>
+                  <li><a href="/blog/bloglist/">bloglist</a></li>
+                  <li><a href="/blog/about/">about</a></li>
+                  <li><a href="/blog/list/">list</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>{% block extrahead %}{% endblock %}</h1>
+     
+        <div class="content_item">
+          <p><strong>{% block title %}{% endblock %}</strong></p>
+      </div>
+      </div>
+      <div class="content">
+    
+        <h1> </h1>
+        <div class="content_item">
+          <p> </p>
+          <ul>
+            <li>{% block content %}{% endblock %}</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+   
+      </div>
+	 {% block sidebar %}{% endblock %}
+    </div>
+    <footer>
+      <p><a href="/">Home</a> | <a href="/blog/i/">new post</a> | <a href="/blog/posts/">blogs</a> | <a href="/blog/authorlist/">list of authors</a> | <a href="/blog/contact">Contact Us</a></p>
+      <p>2014 | <a href="/blog/date/">from date</a></p>
+    </footer>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+
+</body>
+</html>

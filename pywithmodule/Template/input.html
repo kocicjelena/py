@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+{% block title %}
+    {% if error %}
+        <p>Please submit your blog</p>
+    {% endif %}
+   
+
+    <form action="" method="get">
+     <label for="id_headline">headline:</label>
+        <input for="id_headline" type="text" name="q">{% endblock %}
+        {% block content %} <label for="id_text">note:</label>
+        <input for="id_text" type="text" name="b">{% endblock %}
+        {% block sidebar %}<input type="submit" value="submit">
+    </form>
+{% endblock %}
