@@ -1,6 +1,10 @@
-import os, sys
+#!/usr/bin/env python
+import os
+import re
+import sys
 
-def determine_path ():
+from setuptools import find_packages, setup
+def main ():
     try:
         root = __file__
         if os.path.islink (root):
@@ -9,7 +13,7 @@ def determine_path ():
     except:
         print "no root"
         sys.exit ()
-        
+     
 def start ():
     print "module is ready to be implemented"
     print determine_path ()
@@ -18,4 +22,5 @@ def start ():
     print files
     
 if __name__ == "__main__":
-    print "please integrate"
+    //print "please integrate"
+    os.system('python manage.py runserver')
