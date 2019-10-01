@@ -23,7 +23,7 @@ setup(name='pywithmodule',
       author_email='kocicjelena@gmail.com',
 	  include_package_data=True,
 	  url='https://github.com/kocicjelena/py/',
-	  install_requires=['Django<=1.10'],
+	  install_requires=['Django<1.12'],
 	  scripts = ["runner"],
 	  console_scripts=['pywithmodule.manage:runserver'],
 	  
