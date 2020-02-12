@@ -1,4 +1,4 @@
-Django==1.10.0
+Django==1.11.23
 kappa==0.6.0
 lambda-packages==0.15.0
 python-dateutil==2.6.0
