@@ -11,4 +11,4 @@ tqdm==4.11.2
 Werkzeug==0.12
 wheel==0.29.0
 wsgi-request-logger==0.4.6
-setuptools==33.1.1
+setuptools==65.5.1
